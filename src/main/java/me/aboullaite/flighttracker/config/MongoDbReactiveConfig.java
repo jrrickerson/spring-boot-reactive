@@ -10,7 +10,12 @@ import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRep
 public class MongoDbReactiveConfig extends AbstractReactiveMongoConfiguration {
     @Override
     public MongoClient reactiveMongoClient() {
-        return MongoClients.create();
+        String value = System.getenv("DATABASE_HOSTNAME");
+        if (value != null) {
+            return MongoClients.create("mongodb://" + value);
+        } else {
+            return MongoClients.create();
+        }
     }
 
     @Override
