@@ -12,7 +12,6 @@ public class MongoDbReactiveConfig extends AbstractReactiveMongoConfiguration {
     public MongoClient reactiveMongoClient() {
         String value = System.getenv("DATABASE_HOSTNAME");
         if (value != null) {
-            System.out.println("Creating connection to mongo via " + value)
             return MongoClients.create("mongodb://" + value);
         } else {
             return MongoClients.create();
