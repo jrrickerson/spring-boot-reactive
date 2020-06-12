@@ -15,13 +15,13 @@ public class StateVector {
     private Double lastContact;
     private Double longitude;
     private Double latitude;
-    private Double geoAltitude;
+    private Double baroAltitude;
     private boolean onGround;
     private Double velocity;
     private Double heading;
     private Double verticalRate;
     private Set<Integer> serials;
-    private Double baroAltitude;
+    private Double geoAltitude;
     private String squawk;
     private boolean spi;
     private PositionSource positionSource;

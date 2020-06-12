@@ -5,7 +5,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum PositionSource {
     ADS_B(0),
     ASTERIX(1),
-    MLAT(2);
+    MLAT(2),
+    FLARM(3);
 
     private final int number;
 
